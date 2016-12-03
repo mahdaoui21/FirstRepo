@@ -1,0 +1,37 @@
+
+<html>
+<head>
+    <title>Creation d'elements HTML en Javascript avec notion d'objet</title>
+
+</head>
+<body>
+<div id="container">
+
+
+</div>
+<script>
+    function createElement(nom,att){
+        var Element=document.createElement(nom);
+        for(var e in att){
+
+            Element.setAttribute(e,att[e]);
+        }
+
+        return Element;
+    }
+    b=document.querySelector('#container');
+    table = createElement('table',{border : '2px',height:"100px",width:'300px'});
+    tr=createElement('tr',{});
+    th=createElement('th',{style:'background-color:red;'});
+    td = createElement('td',{});
+    tr.append(createElement('th',{style:'background-color:red;'}),createElement('th',{style:'background-color:red;'}),createElement('th',{style:'background-color:red;'}));
+    table.append(tr)
+    tr=createElement('tr',{});
+    tr.append(td,createElement('td',{}),createElement('td',{}));
+    table.append(tr);
+
+    b.append(table);
+</script>
+</body>
+
+</html>

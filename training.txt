@@ -1,5 +1,5 @@
 hello world
 Hello me !
 new line
-cc
-new line on mahdaoui to create merge request
+new line on mahdaoui to create merge master
+line form master
